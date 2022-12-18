@@ -2,8 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./layout/Navbar";
 import Erorr from "./pages/Erorr/Erorr";
 import Footer from "./layout/Footer";
-import "./App.css";
-import  {context}  from "./context/Context";
+import { context } from "./context/Context";
 import Home from "./pages/Home/Home";
 import PullRequests from "./pages/PullRequests";
 function App() {
