@@ -1,0 +1,19 @@
+.edit-btn{
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 5px 0;
+  background-color: #21262D;
+  border: 1px solid #383c42;
+  color:rgb(188, 194, 200);
+  border-radius:5px;
+
+  &:hover{
+    background-color: #383c42;
+    border: 1px solid rgb(183, 171, 171);
+  }
+}
+
+.aside{
+ width: 300px;
+  border-bottom: 1px solid #63676d;
+}

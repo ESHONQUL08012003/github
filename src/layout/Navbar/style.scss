@@ -1,0 +1,40 @@
+.header{
+  background-color: #161B22;
+
+
+  .containers{
+    width: 1400px;
+    margin: 0 auto;
+  }
+
+  &__input{
+    width: 300px;
+    background-color: #000 !important;
+    border: 1px solid white;
+    border-radius: 4px;
+  }
+
+  &__link{
+    transition: 0.4s ease;
+
+    &:hover{
+      color: red !important;
+    }
+  }
+
+  .notfiy{
+    font-size: 25px !important;
+  }
+
+  .your-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: #161B22;
+  }
+  
+}

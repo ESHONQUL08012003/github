@@ -1,0 +1,68 @@
+.containers{
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.componentRequst:nth-child(1){
+  padding: 5px 10px;
+ border: 1px solid rgb(86, 71, 71);
+ border-radius: 6px 0 0 6px;
+ transition: all 1s ease;
+
+ &:hover{
+  background-color: rgb(27, 26, 26);
+
+  &:active{
+    background-color: blue;
+    color: #fff;
+    transition: all 1s ease;
+  }
+ }
+}
+
+
+.componentRequst:nth-child(4){
+  padding: 5px 10px;
+ border: 1px solid rgb(86, 71, 71);
+ border-radius: 0 6px 6px 0px;
+
+ &:hover{
+  background-color: rgb(27, 26, 26);
+  &:active{
+    background-color: blue;
+    color: #fff;
+    transition: all 1s ease;
+  }
+ }
+}
+
+.componentRequst{
+  padding: 5px 10px;
+  border: 1px solid rgb(86, 71, 71);
+
+  &:active{
+    background-color: blue;
+    transition: all 1s ease;
+    color:#fff;
+  }
+}
+
+.not-result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+  text-align: center;
+  background-color: #0D1117;
+}
+
+.not-result  p{
+  padding: 15px 0;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.pullRequest-card{
+  background-color: #161B22;
+}
