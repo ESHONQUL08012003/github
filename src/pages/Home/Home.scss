@@ -1,0 +1,19 @@
+.NavLink {
+  color: rgb(219, 228, 231);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 5px;
+  transition: all 0.2s linear;
+  border-radius: 5px;
+  
+  &:hover {
+    background-color: #21262d;
+    color: lightblue;
+  }
+}
+
+.active {
+  border-bottom: 3px solid rgb(198, 100, 100);
+}

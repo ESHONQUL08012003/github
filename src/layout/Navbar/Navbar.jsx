@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.scss";
 import { Link } from "react-router-dom";
-import icon from "../../assets/imgs/photo_2022-12-07_13-41-21.jpg";
+import icon from "../../assets//imgs/photo_2022-12-07_13-41-21.jpg";
 
 const Navbar = () => {
   return (
@@ -19,7 +19,7 @@ const Navbar = () => {
               <nav>
                 <ul className="list-unstyled d-flex gap-4 align-items-center m-0 p-0 ">
                   <li>
-                    <Link to="/pulrequest" className="text-white header__link">
+                    <Link to="/home" className="text-white header__link">
                       Pull requests
                     </Link>
                   </li>

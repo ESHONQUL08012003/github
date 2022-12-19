@@ -1,0 +1,40 @@
+.repos-list {
+  width: 180%;
+  margin-top: 20px;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    // border: 2px 0 solid white;
+    padding: 20px;
+
+    .repo-btn {
+      background-color: #0d1117;
+      padding: 0px 15px;
+      border: 2px solid rgb(84, 84, 84);
+      border-radius: 20px;
+    }
+  }
+
+  .bookmark {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid yellowgreen;
+    span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 2px 5px;
+      border: none;
+      border-radius: 5px 0 0 5px;
+      background-color: #21262D;
+    }
+
+    select {
+      border: none;
+      padding: 5px 5px;
+      border-radius: 0px 5px 5px 0px;
+      background-color: #21262D;
+    }
+  }
+}

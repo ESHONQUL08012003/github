@@ -1,0 +1,29 @@
+.project {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__box {
+    padding: 30px;
+    width: 62vw;
+    border: 2px solid rgb(206, 206, 206);
+    border-radius: 5px;
+  }
+
+  .project-btn {
+    border: none;
+    border-radius: 5px;
+    padding: 4px 6px;
+    background-color: #238636;
+
+    &:hover{
+      background-color: #3abf54;
+    }
+
+    &:active{
+      background-color: #1f4a27;
+    }
+
+  }
+}
