@@ -8,7 +8,8 @@ import Overview from "./pages/HomeContext/Overview";
 import Repositories from "./pages/HomeContext/Repositories";
 import Following from "./pages/HomeContext/Folowing/Following";
 import Project from "./pages/HomeContext/Project";
-import Peckejs from "./pages/HomeContext/Peckejs"
+import Peckejs from "./pages/HomeContext/Peckejs";
+import Startes from "./pages/HomeContext/Startes";
 
 
 const App = () => {
@@ -21,10 +22,11 @@ const App = () => {
             <Route path="*" element={<Erorr />} />
             <Route path="/home" element={<Home />}>
               <Route index path="/home/oerview" element={<Overview />} />
-              <Route path="home/repositories" element={<Repositories />} />
+              <Route path="/home/repositories" element={<Repositories />} />
               <Route path="/home/following" element={<Following />} />
               <Route path="/home/project" element={<Project/>}/>
               <Route path="/home/pacejs" element={<Peckejs/>}/>
+              <Route path="/home/star" element={<Startes/>}/>
             </Route>
           </Routes>
         </main>

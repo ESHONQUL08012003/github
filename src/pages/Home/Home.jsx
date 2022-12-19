@@ -20,7 +20,7 @@ const Home = () => {
               </li>
               <li>
                 <NavLink
-                  to="home/repositories"
+                  to="/home/repositories"
                   className={({isActive})=> isActive ? "NavLink active" : "NavLink" }
                 >
                   <i className="fas fa-book"></i>Repositories
@@ -44,7 +44,7 @@ const Home = () => {
               </li>
               <li>
                 <NavLink
-                  to="stasr"
+                  to="/home/star"
                   className={({isActive})=> isActive ? "NavLink active" : "NavLink" }
                 >
                   <i className="far fa-star"></i>Stars
