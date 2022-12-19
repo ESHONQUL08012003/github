@@ -10,8 +10,6 @@ const Repositories = () => {
     API.getRepo().then((result) => setUser(result.data));
   }, []);
 
-  console.log(user);
-
   return (
     <ul className="repos-list list-unstyled">
       {user.map((el, i) => {
@@ -32,7 +30,7 @@ const Repositories = () => {
 
             <div className="bookmark">
               <span>
-                <i class="far fa-star"></i>star
+                <i className="far fa-star"></i>star
               </span>
               <select>
                 <option value=""></option>

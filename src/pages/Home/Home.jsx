@@ -12,7 +12,7 @@ const Home = () => {
             <ul className="d-flex justify-content-center gap-4 list-unstyled">
               <li className="d-flex align-items-center">
                 <NavLink
-                  to="/home/oerview" index
+                  to="/home/oerview"
                   className={({isActive})=> isActive ? "NavLink active" : "NavLink" }
                 >
                   <i className="fas fa-book-open"></i>Overview

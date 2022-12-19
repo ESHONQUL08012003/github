@@ -9,6 +9,7 @@ const Aside = () => {
     API.getUser().then((result) => setMyProfil(result.data));
   }, []);
 
+
   return (
     <div>
       <div className="container">
@@ -35,7 +36,7 @@ const Aside = () => {
             </div>
 
             <div>
-              <Link className="text-light" href="">
+              <Link className="text-light" >
                 {myProfil.followers}
                 <i className="fas fa-user-friends text-light ms-1"></i>
                 followers .

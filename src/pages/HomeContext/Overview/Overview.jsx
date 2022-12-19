@@ -28,7 +28,7 @@ const Overview = () => {
           <Link key={i} className="col-6 mb-3">
             <div className="overview">
               <div className="d-flex justify-content-between mb-3 ">
-                <a href="">{el.name}</a>
+                <Link>{el.name}</Link>
                 <button>{el.visibility}</button>
               </div>
 
