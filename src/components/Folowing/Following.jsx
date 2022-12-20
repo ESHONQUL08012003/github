@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { API } from "../../../api/Api";
+import { API } from "../../api/Api";
 import "./Follow.scss";
 
 const Following = () => {
@@ -18,10 +18,10 @@ const Following = () => {
   console.log(follow);
 
   return (
-    <div>
+    <div className="follow-list">
       {follow.map((el, i) => {
         return (
-          <Link key={i}>
+          <div key={i}>
             <div className="d-flex follow-item">
               <div>
                 <div>
@@ -34,7 +34,7 @@ const Following = () => {
 
                 <div>
                   <span className="me-2">{el.name}</span>
-                  <a href="">{el.login}</a>
+                  <a href={el.html_url} target="_blank">{el.login}</a>
                  
                 </div>
               </div>
@@ -43,7 +43,7 @@ const Following = () => {
                 <button>Unfollow</button>
               </div>
             </div>
-          </Link>
+          </div>
         );
       })}
     </div>

@@ -1,13 +1,8 @@
 import React from "react";
-import { NavLink,Routes, Route } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import Aside from "../../layout/Aside";
 import "./Home.scss";
-import Overview from "../HomeContext/Overview";
-import Repositories from "../HomeContext/Repositories";
-import Following from "../HomeContext/Repositories";
-import Project from "../HomeContext/Project";
-import Peckejs from "../HomeContext/Peckejs";
-import Startes from "../HomeContext/Startes";
+
 
 const Home = () => {
   return (
@@ -74,16 +69,7 @@ const Home = () => {
           <div className="d-flex  gap-3">
             <Aside />
             <div>
-              <Routes>
-                <Route>
-                  <Route index path="/home/oerview" element={<Overview />} />
-                  <Route path="/home/repositories" element={<Repositories />} />
-                  <Route path="/home/following" element={<Following />} />
-                  <Route path="/home/project" element={<Project />} />
-                  <Route path="/home/pacejs" element={<Peckejs />} />
-                  <Route path="/home/star" element={<Startes />} />
-                </Route>
-              </Routes>
+              <Outlet/>
             </div>
           </div>
         </div>

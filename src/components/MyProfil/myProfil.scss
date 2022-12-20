@@ -1,0 +1,77 @@
+.myProfil {
+  position: absolute;
+  top: 42px;
+  right: -100px;
+  width: 200px;
+  border-radius: 5px;
+  transform: translate(-50%);
+  z-index: 100000;
+  background-color: #161b22;
+  border: 1px solid rgb(138, 135, 131);
+  display: none;
+  color: #c9d1d9;
+  &::before {
+    position: absolute;
+    top: -20px;
+    right: 25px;
+    display: block;
+    content: " ";
+    width: 14px;
+    height: 14px;
+
+    border: 14px solid #3c485a;
+    border-top: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding: 5px 15px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgb(24, 75, 152);
+      }
+    }
+  }
+
+  &__list-top {
+    border-bottom: 1px solid white !important;
+    background-color: red;
+  }
+
+  &__title {
+    padding: 15px;
+    border-bottom: 1px solid rgb(138, 135, 131);
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 82%;
+    padding: 2px 10px;
+    gap: 5px;
+    margin: 10px auto;
+    background-color: #161b22;
+    border: 1px solid chocolate;
+    border-radius: 6px;
+
+    i {
+      color: white;
+      background-color: #55b763;
+      border-radius: 50%;
+      padding: 2px;
+      font-size: 18px;
+    }
+
+    &:hover {
+      color: rgb(124, 124, 243);
+    }
+  }
+}

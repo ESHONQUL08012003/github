@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { API } from "../../../api/Api";
+import { API } from "../../api/Api";
 import { useEffect, useState } from "react";
 import "./resposiyory.scss";
 
@@ -24,7 +24,7 @@ const Repositories = () => {
 
               <div className="d-flex gap-3">
                 <span className="text-white">{el.language}</span>
-                <strong>last week</strong>
+                <strong>{el.updated_at}</strong>
               </div>
             </div>
 

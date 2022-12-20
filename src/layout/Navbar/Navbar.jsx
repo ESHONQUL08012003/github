@@ -1,9 +1,16 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import "./style.scss";
 import { Link } from "react-router-dom";
 import icon from "../../assets//imgs/photo_2022-12-07_13-41-21.jpg";
+import Manu from "../../components/MyProfil/Manu";
+
 
 const Navbar = () => {
+  
+
+
+
+
   return (
     <>
       <header className="header py-3">
@@ -14,17 +21,17 @@ const Navbar = () => {
                 <i className="fab fa-github fa-2x text-white"></i>
               </Link>
 
-              <input className="header__input px-2" type="text" placeholder="search or jump to..." />
+              <input onChange={(el)=> setSearch(el.target.value)} className="header__input px-2" type="text" placeholder="search or jump to..." />
 
               <nav>
                 <ul className="list-unstyled d-flex gap-4 align-items-center m-0 p-0 ">
                   <li>
-                    <Link to="/home" className="text-white header__link">
+                    <Link to="/pulRAequest" className="text-white header__link">
                       Pull requests
                     </Link>
                   </li>
                   <li>
-                    <Link to="*" className="text-white header__link">
+                    <Link to="/issue" className="text-white header__link">
                       Issues
                     </Link>
                   </li>
@@ -57,7 +64,7 @@ const Navbar = () => {
                 <i className="fas fa-caret-down"></i>
               </a>
 
-              <div className="d-flex align-items-center gap-2">
+              <div className="d-flex align-items-center gap-2 position-relative">
                 <button className="your-btn">
                   <img
                     style={{
@@ -70,6 +77,9 @@ const Navbar = () => {
                   />
                 </button>
                 <i className="fas fa-caret-down text-white"></i>
+                <div>
+                <Manu/>
+                </div>
               </div>
             </div>
           </div>

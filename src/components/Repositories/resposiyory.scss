@@ -1,11 +1,17 @@
 .repos-list {
-  width: 180%;
   margin-top: 20px;
-
+  width: 180%;
+  // display: flex;
+  // align-items: center;
+  // flex-direction: column;
+  // height: 100vh;
+  // overflow-y: scroll;
+  // width: 60vw;
+  
   &__item {
     display: flex;
     justify-content: space-between;
-    // border: 2px 0 solid white;
+    border: 2px 0 solid white;
     padding: 20px;
 
     .repo-btn {
@@ -27,14 +33,14 @@
       padding: 2px 5px;
       border: none;
       border-radius: 5px 0 0 5px;
-      background-color: #21262D;
+      background-color: #21262d;
     }
 
     select {
       border: none;
       padding: 5px 5px;
       border-radius: 0px 5px 5px 0px;
-      background-color: #21262D;
+      background-color: #21262d;
     }
   }
 }

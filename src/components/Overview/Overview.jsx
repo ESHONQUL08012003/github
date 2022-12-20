@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { API } from "../../../api/Api";
+import { API } from "../../api/Api";
 import "./overview.scss";
 
 const Overview = () => {
