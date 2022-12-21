@@ -1,4 +1,3 @@
-import { context } from "./context/Context";
 import Navbar from "./layout/Navbar";
 import { Routes, Route } from "react-router-dom";
 import Footer from "./layout/Footer";
@@ -15,11 +14,12 @@ import Following from "./components/Folowing";
 import Project from "./components/Project";
 import Peckejs from "./components/Peckejs";
 import Startes from "./components/Startes";
+import Followers from "./components/Followers";
 
 const App = () => {
   return (
     <>
-      <context.Provider value={"https://api.github.com/users/`"}>
+      
         <Navbar />
         <main>
           <Routes>
@@ -31,6 +31,7 @@ const App = () => {
               <Route path="/home/project" element={<Project />} />
               <Route path="/home/pacejs" element={<Peckejs />} />
               <Route path="/home/star" element={<Startes />} />
+              <Route path="/home/followers" element={<Followers/>}/>
             </Route>
             <Route path="/pulRAequest" element={<PullRequests />} />
             <Route path="/issue" element={<Issues />} />
@@ -41,7 +42,7 @@ const App = () => {
         </main>
 
         <Footer />
-      </context.Provider>
+    
     </>
   );
 };

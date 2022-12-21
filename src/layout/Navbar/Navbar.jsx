@@ -3,6 +3,9 @@ import "./style.scss";
 import { Link } from "react-router-dom";
 import icon from "../../assets//imgs/photo_2022-12-07_13-41-21.jpg";
 import Manu from "../../components/MyProfil/Manu";
+import { BsBell, BsSlashLg } from "react-icons/bs";
+
+
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const [openRepo, setOpenRepo] = useState(false);
@@ -41,14 +44,34 @@ const Navbar = () => {
                 <i className="fab fa-github fa-2x text-white"></i>
               </Link>
 
-              <input
-                onChange={(el) => setUserName(el.target.value)}
-                className="header__input px-2"
-                type="text"
-                placeholder="search or jump to..."
-              />
+              <div className="position-relative">
+                <input
+                  onChange={(el) => setUserName(el.target.value)}
+                  className="header__input px-2"
+                  type="text"
+                  placeholder="search or jump to..."
+                />
+                <button onClick={searchUses} className="search-btn">
+                  <span className="search-btn-icon">
+                    <BsSlashLg />
+                  </span>
+                </button>
+                {searchinUser ? (
+                  <div>
+                    <div className="text-wite resul-menu">
+                      <ul className="result-list">
+                        <li className="resul-item">new users</li>
+                        <li className="resul-item">new users</li>
+                        <li className="resul-item">new users</li>
+                        <li className="resul-item">new users</li>
+                        <li className="resul-item">new users</li>
+                      </ul>
 
-              
+                      <div className="resul-bottom">nev project</div>
+                    </div>
+                  </div>
+                ) : null}
+              </div>
 
               <nav>
                 <ul className="list-unstyled d-flex gap-4 align-items-center m-0 p-0 ">
@@ -82,9 +105,10 @@ const Navbar = () => {
             </div>
 
             <div className="d-flex gap-3 align-items-center">
-              <Link href="">
-                <i className="fas fa-bell notfiy"></i>
-              </Link>
+              <a href="">
+                <BsBell style={{ color: "white", fontSize: "20px" }} />
+                <span className="badge bg-danger badge-dot"></span>
+              </a>
 
               <div className="position-relative">
                 <button onClick={openRepoMenu} className="add-repo">

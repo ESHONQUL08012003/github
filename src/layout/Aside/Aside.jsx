@@ -36,7 +36,7 @@ const Aside = () => {
             </div>
 
             <div>
-              <Link className="text-light" >
+              <Link to="/home/followers" className="text-light" >
                 {myProfil.followers}
                 <i className="fas fa-user-friends text-light ms-1"></i>
                 followers .
@@ -47,13 +47,13 @@ const Aside = () => {
             </div>
 
             <div className="py-3 border-0">
-              <Link
+              <a
                 className="text-light"
                 target="_blank"
-                to={"https://twitter.com/eshonqul74"}
+                href={"https://twitter.com/eshonqul74"}
               >
                 <i className="fab me-2 fa-twitter"></i>@eshonqul03
-              </Link>
+              </a>
             </div>
 
             <div className="position-absolute  mt-4">

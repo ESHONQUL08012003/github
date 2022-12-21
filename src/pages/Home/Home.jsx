@@ -29,7 +29,7 @@ const Home = () => {
                     isActive ? "NavLink active" : "NavLink"
                   }
                 >
-                  <i className="fas fa-book"></i>Repositories
+                  <i className="fas fa-book"></i>Repositories <span style={{background:"#343942", padding:"0 7px", borderRadius:"45%"}}>39</span>
                 </NavLink>
               </li>
               <li>
