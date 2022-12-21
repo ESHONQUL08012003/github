@@ -18,7 +18,7 @@ const Navbar = () => {
     fetch(SER_URL)
       .then((res) => res.json())
       .then((result) => console.log(result));
-  }, [userName]);
+  }, [userName]); 
 
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
@@ -60,7 +60,7 @@ const Navbar = () => {
                   <div>
                     <div className="text-wite resul-menu">
                       <ul className="result-list">
-                        <li className="resul-item">new users</li>
+                        <li className="resul-item">{userName}</li>
                         <li className="resul-item">new users</li>
                         <li className="resul-item">new users</li>
                         <li className="resul-item">new users</li>
