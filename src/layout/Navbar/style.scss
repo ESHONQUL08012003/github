@@ -1,34 +1,37 @@
-.header{
-  background-color: #161B22;
+.header {
+  padding: 15px 0;
+  background-color: #161b22;
   // position:fixed;
   // width: 100%;
-// top: 0;
+  // top: 0;
 
-  .containers{
-    width: 1400px;
+  .containers {
+    width: 1450px;
     margin: 0 auto;
   }
 
-  &__input{
-    width: 300px;
+  &__input {
+    width: 250px;
     background-color: #000 !important;
-    border: 1px solid white;
+    border: 1px solid rgb(113, 104, 104);
     border-radius: 4px;
+    padding: 0;
   }
 
-  &__link{
+  &__link {
     transition: 0.4s ease;
+    font-size: 15px;
 
-    &:hover{
+    &:hover {
       color: red !important;
     }
   }
 
-  .notfiy{
+  .notfiy {
     font-size: 25px !important;
   }
 
-  .your-btn{
+  .your-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,7 +39,40 @@
     height: 30px;
     border: 1px solid white;
     border-radius: 50%;
-    background-color: #161B22;
+    background-color: #161b22;
   }
-  
+
+  .add-repo {
+    background-color: transparent;
+    border: none;
+  }
+
+  .my-repo {
+    position: absolute;
+    top: 40px;
+    width: 150px;
+    list-style: none;
+    padding: 0;
+    border-radius: 5px;
+    background-color: #161b22;
+    border: 1px solid rgb(138, 135, 131);
+    color: #c9d1d9;
+    z-index: 100000;
+    transform: translate(-50%);
+
+    &__item{
+      font-size: 14px;
+      padding: 2px 15px;
+      cursor: pointer;
+
+      &:hover{
+        background-color: rgb(24, 75, 152);
+      }
+    }
+  }
+}
+
+.icon {
+  position: absolute;
+  right: -10px;
 }

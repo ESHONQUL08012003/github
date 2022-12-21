@@ -1,6 +1,5 @@
 import React from "react";
 import "./project.scss";
-
 function Project(props) {
   return (
     <div>

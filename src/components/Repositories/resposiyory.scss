@@ -1,6 +1,5 @@
 .repos-list {
   margin-top: 20px;
-  width: 180%;
   // display: flex;
   // align-items: center;
   // flex-direction: column;
@@ -11,8 +10,8 @@
   &__item {
     display: flex;
     justify-content: space-between;
-    border: 2px 0 solid white;
-    padding: 20px;
+    border-color: #4c4c4d !important;
+    padding: 20px 0;
 
     .repo-btn {
       background-color: #0d1117;

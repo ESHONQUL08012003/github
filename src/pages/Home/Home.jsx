@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import Aside from "../../layout/Aside";
 import "./Home.scss";
+import {FiPackage} from "react-icons/fi"
 
 
 const Home = () => {
@@ -10,12 +11,12 @@ const Home = () => {
       <div className="">
         <div className="menu border-0 border-bottom pt-5">
           <div className="container">
-            <ul className="d-flex justify-content-center gap-4 list-unstyled">
+            <ul className="d-flex justify-content-center gap-4 list-unstyled mb-1">
               <li className="d-flex align-items-center">
                 <NavLink
-                  to="/home/oerview"
+                  to="/home"
                   className={({ isActive }) =>
-                    isActive ? "NavLink active" : "NavLink"
+                    isActive ? "NavLink " : "NavLink"
                   }
                 >
                   <i className="fas fa-book-open"></i>Overview
@@ -48,7 +49,7 @@ const Home = () => {
                     isActive ? "NavLink active" : "NavLink"
                   }
                 >
-                  <i className="fas fa-cube"></i>Packages
+                  <FiPackage/>Packages
                 </NavLink>
               </li>
               <li>
@@ -66,9 +67,9 @@ const Home = () => {
         </div>
 
         <div className="container">
-          <div className="d-flex  gap-3">
+          <div className="d-flex justify-content-between gap-3">
             <Aside />
-            <div>
+            <div className="home-containers">
               <Outlet/>
             </div>
           </div>

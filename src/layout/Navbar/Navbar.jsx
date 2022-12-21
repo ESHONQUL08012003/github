@@ -3,25 +3,52 @@ import "./style.scss";
 import { Link } from "react-router-dom";
 import icon from "../../assets//imgs/photo_2022-12-07_13-41-21.jpg";
 import Manu from "../../components/MyProfil/Manu";
-
-
 const Navbar = () => {
-  
+  const [openMenu, setOpenMenu] = useState(false);
+  const [openRepo, setOpenRepo] = useState(false);
+  const [searchinUser, setSearchingUser] = useState(false);
+  const [userName, setUserName] = useState([]);
 
+  const SER_URL = `https://api.github.com/search/users?q=${userName}`;
 
+  useEffect(() => {
+    fetch(SER_URL)
+      .then((res) => res.json())
+      .then((result) => console.log(result));
+  }, [userName]);
 
+  const toggleMenu = () => {
+    setOpenMenu(!openMenu);
+  };
+
+  const openRepoMenu = () => {
+    setOpenRepo(!openRepo);
+  };
+
+  const searchUses = () => {
+    setSearchingUser(!searchinUser);
+  };
+
+  console.log(userName);
 
   return (
     <>
-      <header className="header py-3">
+      <header className="header">
         <div className="containers">
           <div className="header__logo d-flex gap-4 align-items-center justify-content-between">
             <div className="d-flex gap-4 align-items-center">
-              <Link to='/home'>
+              <Link to="/home">
                 <i className="fab fa-github fa-2x text-white"></i>
               </Link>
 
-              <input onChange={(el)=> setSearch(el.target.value)} className="header__input px-2" type="text" placeholder="search or jump to..." />
+              <input
+                onChange={(el) => setUserName(el.target.value)}
+                className="header__input px-2"
+                type="text"
+                placeholder="search or jump to..."
+              />
+
+              
 
               <nav>
                 <ul className="list-unstyled d-flex gap-4 align-items-center m-0 p-0 ">
@@ -55,17 +82,32 @@ const Navbar = () => {
             </div>
 
             <div className="d-flex gap-3 align-items-center">
-              <a href="">
+              <Link href="">
                 <i className="fas fa-bell notfiy"></i>
-              </a>
+              </Link>
 
-              <a className="text-white" href="">
-                <i className="fas fa-plus me-1"></i>
-                <i className="fas fa-caret-down"></i>
-              </a>
+              <div className="position-relative">
+                <button onClick={openRepoMenu} className="add-repo">
+                  <i className="fas fa-plus me-1"></i>
+                  <i className="fas fa-caret-down"></i>
+                </button>
+
+                <div>
+                  {openRepo ? (
+                    <ul className="my-repo ">
+                      <li className="my-repo__item">New repository</li>
+                      <li className="my-repo__item">import repository</li>
+                      <li className="my-repo__item">New codespace</li>
+                      <li className="my-repo__item">New gist</li>
+                      <li className="my-repo__item">New organization</li>
+                      <li className="my-repo__item">New project</li>
+                    </ul>
+                  ) : null}
+                </div>
+              </div>
 
               <div className="d-flex align-items-center gap-2 position-relative">
-                <button className="your-btn">
+                <button onClick={toggleMenu} className="your-btn">
                   <img
                     style={{
                       width: "30px",
@@ -75,10 +117,14 @@ const Navbar = () => {
                     src={icon}
                     alt=""
                   />
+                  <i className="fas fa-caret-down text-white icon"></i>
                 </button>
-                <i className="fas fa-caret-down text-white"></i>
                 <div>
-                <Manu/>
+                  {openMenu ? (
+                    <div>
+                      <Manu />
+                    </div>
+                  ) : null}
                 </div>
               </div>
             </div>

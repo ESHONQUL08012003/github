@@ -1,15 +1,16 @@
 .myProfil {
   position: absolute;
   top: 42px;
-  right: -100px;
+  right: -110px;
   width: 200px;
   border-radius: 5px;
   transform: translate(-50%);
   z-index: 100000;
   background-color: #161b22;
   border: 1px solid rgb(138, 135, 131);
-  display: none;
   color: #c9d1d9;
+
+  
   &::before {
     position: absolute;
     top: -20px;
@@ -40,10 +41,6 @@
     }
   }
 
-  &__list-top {
-    border-bottom: 1px solid white !important;
-    background-color: red;
-  }
 
   &__title {
     padding: 15px;

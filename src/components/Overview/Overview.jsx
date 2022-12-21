@@ -12,7 +12,6 @@ const Overview = () => {
   
   user.splice("6")
 
-  console.log(user);
 
 
   

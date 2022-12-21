@@ -1,3 +1,5 @@
+
+
 .NavLink {
   color: rgb(219, 228, 231);
   display: flex;
@@ -5,6 +7,9 @@
   align-items: center;
   gap: 15px;
   padding: 5px;
+  font-size: 14px;
+  color: #c9d1d9;
+  font-weight: 100;
   transition: all 0.2s linear;
   border-radius: 5px;
   border-bottom: 3px solid #0D1117;
@@ -17,4 +22,9 @@
 
 .active {
   border-bottom: 3px solid rgb(198, 100, 100);
+}
+
+
+.home-containers{
+  width: 960px;
 }

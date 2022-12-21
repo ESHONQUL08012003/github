@@ -15,7 +15,7 @@ const Repositories = () => {
       {user.map((el, i) => {
         return (
 
-          <li key={i} className="repos-list__item border-0 border-top border-bottom">
+          <li key={i} className="repos-list__item border-0 border-top border-bottom ">
             <div>
               <div className="d-flex justify-content-between align-items-center gap-5">
                 <Link className="fs-4">{el.name}</Link>

@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Explore() {
+function SearchUse(props) {
   return (
     <div>
-      <h1>Explore</h1>
+      
     </div>
   );
 }
 
-export default Explore;
+export default SearchUse;

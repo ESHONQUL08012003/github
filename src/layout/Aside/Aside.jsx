@@ -22,7 +22,7 @@ const Aside = () => {
                   height: "300px",
                   borderRadius: "50%",
                   position: "absolute",
-                  top: "-60px",
+                  top: "-40px",
                 }}
                 src={myProfil.avatar_url}
                 alt=""
